@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+:root{
+    /* Fonts */
+    --font-inter:'Inter', sans-serif;
+    --font-Lexend:'Lexend Deca', sans-serif;
+
+    /* colors */
+    --very-blue:hsl(233, 47%, 7%);
+    --dark-blue:hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    --white:hsl(0, 0%, 100%);
+    --slightly-white: hsla(0, 0%, 100%, 0.75);
+    --slightly-white-a: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color:var(--very-blue);
+  font-family: var(--font-inter);
+}
+.container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.card{
+    max-width:70rem;   
+    display:grid;
+    grid-template-columns:1fr 1fr;    
+    align-content: center;
+   
+}
+.itens-card-l{  
+  background-color: var(--dark-blue);
+  color:var(--white);   
+  border-radius: 0.50rem 0 0 0.50rem;
+}
+.p-itens-card-l{    
+    max-width:78%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:100%;
+}
+.itens-card-l h1{     
+    font-size: 2.4rem;
+}
+.itens-card-l h1 span{
+    color:var(--soft-violet);
+}
+.itens-card-l p{
+   padding-right: 2rem;
+   line-height: 1.5rem;
+   position: relative;
+   top: -2rem;   
+   color: var(--slightly-white);
+}   
+
+picture {  
+    display: inherit;
+    background-color:#aa5cdb;
+    border-radius: 0 0.50rem  0.50rem 0;
+}
+picture img{
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply; 
+    opacity: 0.8;
+    
+}
+.sistem-count{
+  position: relative;  
+  display:flex;
+  justify-content: space-between; 
+}
+.sistem-count h3{ 
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: -0.1rem;
+}
+.sistem-count span{
+ text-transform: uppercase;
+ color: var(--slightly-white);
+ font-family: var(--font-Lexend);
+ letter-spacing: 0.1rem;
+ font-size: 0.85rem;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:1rem 0;
+    }
+    .card{                
+        grid-template-columns:1fr;     
+        max-width: 90%;
+        text-align: center;
+    }
+    .card picture{      
+        grid-row-start: 1;
+        border-radius: 0.50rem 0.50rem 0 0;
+    } 
+    .p-itens-card-l {
+        max-width: 86%;
+    }
+    .itens-card-l{
+        border-radius: 0 0 0.50rem 0.50rem;
+        padding: 0;
+
+    }
+    .itens-card-l p{
+        padding:0;
+    }
+    .itens-card-l h1 {
+        font-size: 1.6rem;
+        padding:2rem 0;
+    }
+    .sistem-count{
+        padding:1.4rem;
+        display:initial;
+    }
+    .sistem-count-itens {
+        padding: 1.4rem;
+    }
+}
+
+
+@media(max-width:992px){
+    .itens-card-l p{
+        top:0;
+    }
+}
